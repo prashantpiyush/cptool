@@ -1,0 +1,14 @@
+/*
+[ ( ^ _ ^ ) ]
+*/
+// problem: $problem$
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define INF 1000000000
+
+
+
+int main() {
+    return 0;
+}

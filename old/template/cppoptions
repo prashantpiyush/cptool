@@ -1,0 +1,44 @@
+-Wall
+-Wextra
+-pedantic
+-O2
+
+# warns if a var shodows another from outer lvl
+-Wshadow
+
+# printf scanf check
+-Wformat=2
+
+# if floats are directly compared like a==b, rather than fabs(a-b) < eps
+-Wfloat-equal
+
+# if data lost in auto conversion
+-Wconversion
+
+# if logical op is used in place of bitwise op
+-Wlogical-op
+
+# overflow in case of left shift
+-Wshift-overflow=2
+
+# if duplicate conditions in if()...elif()...
+-Wduplicated-cond
+
+-Wcast-qual
+-Wcast-align
+
+# enables debug mode, and stl uses different checks like "out of index"
+-D_GLIBCXX_DEBUG
+-D_GLIBCXX_DEBUG_PEDANTIC
+
+# for buffer overlow
+-D_FORTIFY_SOURCE=2
+
+# out of bound memory access
+-fsanitize=address
+
+# null pointer / div by zero
+-fsanitize=undefined
+-fno-sanitize-recover
+
+-fstack-protector
