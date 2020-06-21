@@ -5,16 +5,19 @@ A competitive programming tool to automate downloading of test cases and creatio
 1. This program can generate test cases for problems from **atcoder.jp** and **codeforces.com** including **gym**.
 2. Parse a whole contest -> will save the sample input/output and generate code for selected languages.
 ```
+# format: cf [-g|-gen] <contest/problem id>
 > cf -gen 1345
 or
 > cf -g 1345
 ```
-3. Parse a single problem. (note: `-gen` and `-g` are same).
+3. Parse a single problem.
 ```
 > cf -gen abc160_d
 ```
 4. Test a code against parsed input-output.
 ```
+# format: cf [-j|-c[-d]] [-r] <problem>
+
 # test java code
 > cf -j a
 
@@ -44,17 +47,15 @@ Enter output:
 <Enter corresponding correct ouput here>
 <Press Enter>
 ```
-Note: Here `a`, `b`, `d`, etc. are problem codes. From specific commands see below, or run `cf -h`.
 
-
-## How to use
+## How to use?
 
 #### Make
 1. Install dependencies using the below command
 ```
 pip3 install -r requirements.txt
 ```
-2. Make changes in the settings.yaml file according to your needs
+2. Make changes in the `settings.yaml` file according to your needs
     - set which languages you need (supports only java acd cpp)
     - set template path for the languages required
 3. Run the following command
@@ -70,6 +71,7 @@ This will first create the `cf` excecutable and will then copy it to `/usr/local
 
 #### Commands
 Use `cf -h` to see the help message:
+Note: `-d` can only be used with `-c|-cpp|--cpp` cpp options.
 ```
 usage: cf [-h] [-g] [-p] [-m] [-a] [-r] [-j] [-c] [-d] problem
 
