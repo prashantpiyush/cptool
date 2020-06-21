@@ -13,10 +13,10 @@ languages:
   - cpp
 
 java:
-  template_path: /home/piyush/Projects/cc/1cptools/template/templatejava.txt
+  template_path: /home/piyush/Projects/cc/1codes/template/templatejava.txt
 
 cpp:
-  template_path: /home/piyush/Projects/cc/1cptools/template/templatecpp.txt
+  template_path: /home/piyush/Projects/cc/1codes/template/templatecpp.txt
 
   version: -std=c++17
 

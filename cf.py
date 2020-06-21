@@ -275,7 +275,7 @@ def run(test=False):
         if test:
             test_code(pid, cmd, [executable_path])
         else:
-            run_code(pid, cmd, [executable_path])
+            run_code(cmd, [executable_path])
 
 
 def parse_atcoder_problem_page(soup: BeautifulSoup):
