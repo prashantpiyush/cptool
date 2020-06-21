@@ -1,0 +1,73 @@
+# settings file for cf helper
+
+# if true, cf tool will only run in directories name ending with 'cf'
+force_cf_dir: false
+
+# path were cookies file is stored,
+# use 'cookie.txt' chrome/mozilla extenstion to download
+# login to codeforces/atcoder and save cookies
+cookies_path: /home/piyush/Downloads/cookies.txt
+
+languages:
+  # - java
+  - cpp
+
+java:
+  template_path: /home/piyush/Projects/cc/1cptools/template/templatejava.txt
+
+cpp:
+  template_path: /home/piyush/Projects/cc/1cptools/template/templatecpp.txt
+
+  version: -std=c++17
+
+  # use this options while running in debug mode
+  debug:
+    - -Wall
+    - -Wextra
+    - -pedantic
+    - -O2
+
+    # warns if a var shodows another from outer lvl
+    - -Wshadow
+
+    # printf scanf check
+    - -Wformat=2
+
+    # if floats are directly compared like a==b rather than fabs(a-b) < eps
+    - -Wfloat-equal
+
+    # if data lost in auto conversion
+    - -Wconversion
+
+    # if logical op is used in place of bitwise op
+    - -Wlogical-op
+
+    # overflow in case of left shift
+    - -Wshift-overflow=2
+
+    # if duplicate conditions in if()...elif()...
+    - -Wduplicated-cond
+
+    - -Wcast-qual
+    - -Wcast-align
+
+    # enables debug mode and stl uses different checks like out of index
+    - -D_GLIBCXX_DEBUG
+    - -D_GLIBCXX_DEBUG_PEDANTIC
+
+    # for buffer overlow
+    - -D_FORTIFY_SOURCE=2
+
+    # out of bound memory access
+    - -fsanitize=address
+
+    # null pointer / div by zero
+    - -fsanitize=undefined
+    - -fno-sanitize-recover
+
+    - -fstack-protector
+  
+  # use this options while running normally
+  normal:
+    - -Wall
+    - -Wshadow
