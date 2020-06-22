@@ -64,6 +64,8 @@ pip3 install -r requirements.txt
 2. Make changes in the `settings.yaml` file according to your needs
     - set which languages you need (supports only java acd cpp)
     - set template path for the languages required
+    - Download and save cookies for both, atcoder and codeforces, sites
+    - set the location of cookies in settings
 3. Run the following command
 ```
 make
