@@ -4,11 +4,17 @@ A competitive programming tool to automate downloading of test cases and creatio
 ## What can you do with this?
 1. This program can generate test cases for problems from **atcoder.jp** and **codeforces.com** including **gym**.
 2. Parse a whole contest -> will save the sample input/output and generate code for selected languages.
+    - For parsing whole contests, links can be used. Links are not supported for individual problems
+    - For **gym**, only links are supported.
+    - **AtCoder** links should end in `/tasks`. Meaning, link of contest's tasks page should be provided.
 ```
 # format: cf [-g|-gen] <contest/problem id>
 > cf -gen 1345
-or
-> cf -g 1345
+> cf -g abc161
+
+> cf -g https://codeforces.com/contest/564
+> cf -gen https://codeforces.com/gym/353232
+> cf -g https://atcoder.jp/contests/dp/tasks/
 ```
 3. Parse a single problem.
 ```
